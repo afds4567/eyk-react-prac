@@ -80,6 +80,7 @@ const Button = styled.button<ButtonProps>`
   opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
   border-radius: 4px;
   border: none;
+  border: ${({ theme }) => `${theme.colors.border} solid 1px`};
 `;
 
 // Button.defaultProps = {
