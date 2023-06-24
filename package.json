@@ -15,8 +15,11 @@
   "dependencies": {
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.22.5",
+    "@react-google-maps/api": "^2.18.1",
     "@types/styled-components": "^5.1.26",
+    "axios": "^1.4.0",
     "babel-loader": "^9.1.2",
+    "google-map-react": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.0.0-rc.3"
