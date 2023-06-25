@@ -14,6 +14,11 @@ module.exports = {
         use: ["babel-loader", "ts-loader"],
       },
       {
+        test: /\.css$/i,
+        include: path.resolve(__dirname, "src"),
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
         test: /\\.(png|jpe?g|gif)$/,
         use: [
           {
