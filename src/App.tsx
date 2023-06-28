@@ -1,7 +1,14 @@
-import { styled } from "styled-components";
+import { ThemeProvider, styled } from "styled-components";
 import Header from "./components/Header";
 import List from "./components/List";
 import Map from "./components/Map";
+import { theme } from "./themes";
+import Dropdown from "./components/common/DropDown";
+import KaKaoMap from "./components/KaKaoMap";
+
+const DropdownWrapper = styled.div`
+  width: 30%;
+`;
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -26,15 +33,24 @@ const MapContainer = styled.div`
 const App = () => {
   return (
     <>
-      <Header />
-      <ContentWrapper>
-        <ListContainer>
-          <List />
-        </ListContainer>
-        <MapContainer>
-          <Map />
-        </MapContainer>
-      </ContentWrapper>
+      <ThemeProvider theme={theme}>
+        <Header />
+        {/* <DropdownWrapper>
+          <Dropdown
+            placeholder="hello"
+            isOpen={true}
+            options={["a", "b", "c"]}
+          />
+        </DropdownWrapper> */}
+        <ContentWrapper>
+          <ListContainer>
+            <List />
+          </ListContainer>
+          <MapContainer>
+            <KaKaoMap />
+          </MapContainer>
+        </ContentWrapper>
+      </ThemeProvider>
     </>
   );
 };
